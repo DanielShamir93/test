@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import LandingPage from "./pages/landing-page/LandingPage.component";
+import LandingPage from "./components/landing-page/LandingPage.component";
 import Login from "./components/login/Login.component";
 import Home from "./components/home/Home.component";
 import Navbar from "./components/navbar/Navbar.component";
@@ -21,7 +21,7 @@ function App() {
           element={
             <>
               <Navbar />
-              {/* {statesObject.loggedInUser.isAuth ? <Home /> : <LandingPage />} */}
+              {statesObject.loggedInUser.isAuth ? <Home /> : <LandingPage />}
             </>
           }
         />
