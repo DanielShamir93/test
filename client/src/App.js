@@ -13,6 +13,8 @@ function App() {
     return { loggedInUser: state.loggedInUser };
   });
 
+  const isAuth = statesObject.loggedInUser.hasOwnProperty("isAuth") ? statesObject.loggedInUser.isAuth : false;
+
   return (
     <Router>
       <Routes>
@@ -21,7 +23,7 @@ function App() {
           element={
             <>
               <Navbar />
-              {statesObject.loggedInUser.isAuth ? <Home /> : <LandingPage />}
+              {isAuth ? <Home /> : <LandingPage />}
             </>
           }
         />
@@ -30,7 +32,7 @@ function App() {
           element={
             <>
               <Navbar />
-              {statesObject.loggedInUser.isAuth ? <Home /> : <Login />}
+              {isAuth ? <Home /> : <Login />}
             </>
           }
         />
