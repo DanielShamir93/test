@@ -4,8 +4,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import Login from "./pages/login/Login.component";
 // import Home from "./pages/home/Home.component";
 import Navbar from "./components/navbar/Navbar.component";
-// import About from "./pages/about/About.component";
-// import Tutorial from "./pages/tutorial/Tutorial.component";
+import About from "./components/about/About.component";
+import Tutorial from "./components/tutorial/Tutorial.component";
 
 function App() {
   
@@ -38,8 +38,8 @@ function App() {
           path="/about"
           element={
             <>
-              {/* <Navbar /> */}
-              {/* <About /> */}
+              <Navbar />
+              <About />
             </>
           }
         />
@@ -47,8 +47,8 @@ function App() {
           path="/tutorial"
           element={
             <>
-              {/* <Navbar /> */}
-              {/* <Tutorial /> */}
+              <Navbar />
+              <Tutorial />
             </>
           }
         />
