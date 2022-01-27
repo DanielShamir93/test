@@ -1,17 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-// import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 // import LandingPage from "./pages/landing-page/LandingPage.component";
-// import Login from "./pages/login/Login.component";
-// import Home from "./pages/home/Home.component";
+import Login from "./components/login/Login.component";
+import Home from "./components/home/Home.component";
 import Navbar from "./components/navbar/Navbar.component";
 import About from "./components/about/About.component";
 import Tutorial from "./components/tutorial/Tutorial.component";
 
 function App() {
   
-  // const statesObject = useSelector((state) => {
-  //   return { loggedInUser: state.loggedInUser };
-  // });
+  const statesObject = useSelector((state) => {
+    return { loggedInUser: state.loggedInUser };
+  });
 
   return (
     <Router>
@@ -29,8 +29,8 @@ function App() {
           path="/login"
           element={
             <>
-              {/* <Navbar /> */}
-              {/* {statesObject.loggedInUser.isAuth ? <Home /> : <Login />} */}
+              <Navbar />
+              {statesObject.loggedInUser.isAuth ? <Home /> : <Login />}
             </>
           }
         />
